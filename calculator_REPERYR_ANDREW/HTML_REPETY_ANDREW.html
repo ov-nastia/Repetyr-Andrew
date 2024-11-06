@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-Калькулятор</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .calculator {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .calculator input, .calculator button {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+        .result {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Онлайн-Калькулятор</h2>
+        <input type="text" id="inputNumber" placeholder="Введіть число">
+        <select id="operation">
+            <option value="sqrt">Квадратний корінь (√)</option>
+            <option value="ln">Логарифм (ln)</option>
+            <option value="sin">Синус (sin)</option>
+            <option value="cos">Косинус (cos)</option>
+            <option value="tan">Тангенс (tan)</option>
+        </select>
+        <button onclick="calculate()">Обчислити</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
